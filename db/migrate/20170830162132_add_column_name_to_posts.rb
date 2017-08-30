@@ -4,3 +4,4 @@ class AddColumnNameToPosts < ActiveRecord::Migration[5.1]
     add_column :posts, :city_id, :integer
   end
 end
+
