@@ -1,0 +1,12 @@
+<% @posts.each do |post| %>
+<p> Post Title: 
+<%= post.title %>
+</p>
+<p>
+<%= post.id %>
+</p>
+<p>Post Review: 
+    <%= post.review %>
+</p>
+<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
