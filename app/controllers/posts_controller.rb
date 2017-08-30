@@ -12,10 +12,20 @@ class PostsController < ApplicationController
         @post.delete
         redirect_to city_posts_path
       end
-    # def create
-    #     @city = City.find(params[:city_id])
-    #     @post = @city.posts.create(post_params)
-    # end
+    def create
+        @city = City.find(params[:city_id])
+        @post = @city.posts.create(post_params)
+    end
+
+    def new
+    end
+
+    def edit
+    end
+
+    def update
+    end
+    
 
      private
      def post_params
