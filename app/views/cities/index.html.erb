@@ -8,5 +8,5 @@
 <%= city.id %>
 </p>
 <%= image_tag city.photo_url %>
-<%= button_to city.name, city_path(city)%>
+<%= button_to city.name, city_path(city), {class: 'btn btn-info'}%>
 <% end %>
