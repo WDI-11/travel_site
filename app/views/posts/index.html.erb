@@ -1,13 +1,17 @@
+<%= link_to 'Add New Post', new_city_post_path, {class: 'btn btn-info'}%>
+
 <% @posts.each do |post| %>
-<p> Post Title: 
-<%= post.title %>
-<%= link_to post.title, city_post_path(post.city_id, post.id), {class: 'btn btn-info'}%>
+<p><strong> Post Title: 
+</strong> 
+<%= link_to post.title, city_post_path(post.city_id, post.id) %>
+
+
 </p>
 <p>
 <%= post.id %>
 </p>
-<p>Post Review: 
-    <%= post.review %>
+<p> <strong>Post Review: 
+    <%= post.review %> </strong>
 </p>
-<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
 <% end %>
