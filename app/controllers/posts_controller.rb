@@ -2,6 +2,11 @@ class PostsController < ApplicationController
     def index
         @posts= Post.all
     end
+
+    def show
+        @post= Post.find(params[:id])
+    end
+
     def destroy
         @post.delete
         respond_to do |format|
@@ -14,9 +19,9 @@ class PostsController < ApplicationController
     #     @post = @city.posts.create(post_params)
     # end
 
-    # private
-    # def post_params
-    #     params.require(:post).permit(:title, :review)
-    # end
+     private
+     def post_params
+         params.require(:post).permit(:title, :review)
+     end
 
 end
