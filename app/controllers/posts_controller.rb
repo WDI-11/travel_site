@@ -8,11 +8,9 @@ class PostsController < ApplicationController
     end
 
     def destroy
+        @post = Post.find(params[:id])
         @post.delete
-        respond_to do |format|
-          format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-          format.json { head :no_content }
-        end
+        redirect_to city_posts_path
       end
     # def create
     #     @city = City.find(params[:city_id])
