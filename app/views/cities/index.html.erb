@@ -1,1 +1,7 @@
 <h1>BINGO BONGO TRAVEL SITE </h1>
+
+<% @cities.each do |city| %>
+<%= city.name %>
+<%= city.id %>
+<%= city.photo_url %>
+<% end %>
