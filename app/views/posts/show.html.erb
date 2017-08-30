@@ -6,6 +6,7 @@
     <p>
     <strong>Review:</strong>
     <%= @post.review%>
-    </p>
+</p>
 
-    
+<%= link_to 'Edit Post', edit_city_post_path, {class: 'btn btn-default'}%>
+<%= link_to 'Destroy', @post, method: :delete, :class => 'btn btn-danger', data: { confirm: 'Are you sure?'} %>
