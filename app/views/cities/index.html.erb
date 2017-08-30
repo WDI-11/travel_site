@@ -1,4 +1,4 @@
-<h1>BINGO BONGO TRAVEL SITE </h1>
+<h1>BOINGO BONGO TRAVEL SITE </h1>
 
 <% @cities.each do |city| %>
 <p> City Name: 
@@ -8,4 +8,5 @@
 <%= city.id %>
 </p>
 <%= image_tag city.photo_url %>
+<%= link_to city.name, city_posts_path(city.id), {class: 'btn btn-info'}%>
 <% end %>
