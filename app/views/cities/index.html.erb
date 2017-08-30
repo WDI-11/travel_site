@@ -1,7 +1,12 @@
 <h1>BINGO BONGO TRAVEL SITE </h1>
 
 <% @cities.each do |city| %>
+<p> City Name: 
 <%= city.name %>
+</p>
+<p>
 <%= city.id %>
-<%= city.photo_url %>
+</p>
+<%= image_tag city.photo_url %>
+<%= button_to city.name, city_path(city)%>
 <% end %>
