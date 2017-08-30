@@ -1,17 +1,31 @@
 <%= link_to 'Add New Post', new_city_post_path, {class: 'btn btn-info'}%>
 
 <% @posts.each do |post| %>
-<p><strong> Post Title: 
-</strong> 
-<%= link_to post.title, city_post_path(post.city_id, post.id) %>
+<h3>
+    <strong>
+        Post Title:
+    </strong> 
+    <%= link_to post.title, city_post_path(post.city_id, post.id) %>
+</h3>
 
-
+<p>
+    <strong>
+        Post Id: 
+    </strong>
+    <%= post.id %>
 </p>
 <p>
-<%= post.id %>
+    <strong>
+        Post Review: 
+    </strong>
+        <%= post.review %>
 </p>
-<p> <strong>Post Review: 
-    <%= post.review %> </strong>
+
+<p>
+    <strong>
+        Post Created At: 
+    </strong>
+        <%= post.created_at %>
 </p>
 
 <% end %>
