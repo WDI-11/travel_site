@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
     def index
-        @posts = Post.all
+        @city = City.find(params[:city_id])
+        @posts = @city.posts.all.order('created_at DESC')
+        # @posts = Post.all
     end
 
     def show
