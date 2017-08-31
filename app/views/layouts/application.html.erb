@@ -44,5 +44,8 @@
       </nav>
       
     <%= yield %>
+    <% if alert %>
+    <p class="alert alert-danger message"><%= alert %></p>
+    <% end %>
   </body>
 </html>

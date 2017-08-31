@@ -21,10 +21,12 @@ class PostsController < ApplicationController
     @city = City.find(params[:city_id])
     @post = @city.posts.new(post_params)
     if @post.save
-        redirect_to city_posts_path(@city, @post)
+        redirect_to city_post_path(@city, @post)
     else
-        redirect_to new_city_post_path
+        flash[:alert] = @post.errors.full_messages.join(", ")
+        render :new
     end
+    # redirect_to city_posts_path(@city, @post)
     end
 
     def new
