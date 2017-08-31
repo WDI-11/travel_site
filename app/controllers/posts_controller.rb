@@ -18,6 +18,7 @@ class PostsController < ApplicationController
       end
     def create
     @city = City.find(params[:city_id])
+<<<<<<< HEAD
     # @post = @city.posts.new(post_params)
         
     # if @post.errors.any?
@@ -41,6 +42,14 @@ class PostsController < ApplicationController
       flash[:error] = @post.errors.full_messages.join(", ")
       redirect_to new_city_post_path
       end
+=======
+    @post = @city.posts.new(post_params)
+    if @post.save
+        redirect_to city_posts_path(@city, @post)
+    else
+        redirect_to new_city_post_path
+    end
+>>>>>>> dev
     end
 
     def new
