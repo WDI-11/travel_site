@@ -16,4 +16,4 @@ Post.create(title: 'C# Required', review: 'This place is awesome if you know C#.
 Post.create(title: 'Joey Hurley Is Danny\'s Newest Clone', review: 'In 10-20 years, he will achieve consciousness and kill his older self, take over his life, and repeat the process in a different city.', city_id:atlanta.id)
 Post.create(title: 'Good Place to Panhandle', review: 'I prefer the street across from Ponce City Market, where if the weather is bad, you can still turn people in and get them towed.', city_id:atlanta.id)
 Post.create(title: 'This place sucks too', review: 'It really really sucks', city_id:london.id)
-Post.create(title: 'Lost of unwashed hippies', review: 'Is there no shower here?', city_id: san_franciso.id)
+Post.create(title: 'Lost of unwashed hippies', review: 'Is there no shower here?', city_id: san_francisco.id)

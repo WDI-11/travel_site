@@ -3,6 +3,11 @@
 
 
 <%= form_for [@city, @post] do |f| %>
+<% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  <% end %>
 
 <p>
     <%= f.label :title %>
@@ -12,6 +17,9 @@
         <%= f.label :review %>
         <%= f.text_field :review %>
 </p>
+<p>
+<%= @post.errors.full_messages.first if @post.errors.any? %>
+</p> 
 <p>
         <%= f.submit :class => "btn btn-info"%>
 </p>
