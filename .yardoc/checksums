@@ -1,5 +1,6 @@
 app/models/city.rb 6cda24ccda3f2e2cdf2ce9589d49b1989c04558c
-app/models/post.rb 8fd80e5771c61b1f96d38329d5a04bca7c1d68b9
+app/models/post.rb 166776664b5eab031867f173f89b116945ab380d
+app/models/user.rb 3f21a1d718ba86ca225d84df6068ea7f247f2f9f
 app/helpers/city_helper.rb f7a7285e9ce66d2a7f55f43b046b640f3f74584c
 app/helpers/posts_helper.rb 74162853fa81bb19e84359e36d0a2e01dd3fec05
 app/jobs/application_job.rb 9a24c3e30cfb517943d8774df4695ba794bfd69d
