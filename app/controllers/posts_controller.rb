@@ -13,12 +13,16 @@ class PostsController < ApplicationController
         redirect_to city_posts_path
       end
     def create
-        @city = City.find(params[:city_id])
-        @post = @city.posts.create(post_params)
+    @city = City.find(params[:city_id])
+    @post = @city.posts.create!(post_params)
+
+    redirect_to city_posts_path(@city, @post)
     end
 
     def new
-        @post = Post.new
+        
+        @city = City.find(params[:city_id])
+        @post = @city.posts.new
     end
 
     def edit
