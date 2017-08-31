@@ -1,12 +1,24 @@
-<h1>BOINGO BONGO TRAVEL SITE </h1>
-
+<!-- <h1>BOINGO BONGO TRAVEL SITE </h1> -->
+<div class="row" style="padding-bottom:1em;">
+    <h1>Welcome to Boingo Bongo Travel Site!</h1>
+    <p>We've got you covered. Ate bad falafel in honduras? Let us know! Got hit in the face by a banana in Atlanta? Tell someone!</p>
+    <h3><strong>Your opinion matters!</strong></h3>
+</div>
+<div class="row" style="display:flex; flex-wrap:wrap;">
 <% @cities.each do |city| %>
-<p> City Name: 
-<%= city.name %>
-</p>
-<p>
+<div class="city-card col-sm-4">
+
+<!-- <p>
 <%= city.id %>
-</p>
-<%= image_tag city.photo_url %>
-<%= link_to city.name, city_posts_path(city.id), {class: 'btn btn-info'}%>
+</p> -->
+<div style="display:block;padding-bottom:0em;height:13em;">
+<%= image_tag city.photo_url, :class => "style_city_card"%>
+<h1 style="color:white;font-weight:800;position:absolute;bottom:3em;left:0;right:0;margin:auto;text-align:center;"><%= city.name %></h1>
+</div>
+<div style="display:block;text-align:center; margin-left:auto;margin-right:auto">
+<%= link_to 'See Reviews', city_posts_path(city.id), {class: 'btn btn-info'}%>
+</div>
+</div>
+
 <% end %>
+</div>

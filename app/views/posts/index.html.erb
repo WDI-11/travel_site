@@ -1,4 +1,12 @@
-<%= link_to 'Add New Post', new_city_post_path, {class: 'btn btn-info'}%>
+<div>
+        <%= image_tag @city.photo_url, :class => "city_header"%>
+        <h1 style="color:white;font-weight:800;position:absolute;bottom:3em;left:0;right:0;margin:auto;text-align:center;font-size:10em;"><%= @city.name %></h1>
+</div>
+
+<div class="row">
+    <div style="text-align:right">
+    <%= link_to 'Add New Post', new_city_post_path, {class: 'btn btn-info'}%>
+    </div>
 
 <% @posts.each do |post| %>
 <h3>
@@ -8,12 +16,12 @@
     <%= link_to post.title, city_post_path(post.city_id, post.id) %>
 </h3>
 
-<p>
+<!-- <p>
     <strong>
         Post Id: 
     </strong>
     <%= post.id %>
-</p>
+</p> -->
 <p>
     <strong>
         Post Review: 
@@ -33,3 +41,4 @@
     </p>
 
 <% end %>
+</div>

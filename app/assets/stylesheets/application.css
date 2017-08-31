@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+.style_city_card {
+    position:relative;
+    width:100%;
+    margin-top:auto;
+    margin-bottom:auto;
+    padding-top:auto;
+    padding-bottom:auto;
+}
+.row{
+    width:90%;
+    margin:auto;
+}
+.navbar{
+    margin-bottom:0px;
+    height: 2em;
+    padding-top:.4em;
+    font-size:5.5rem;
+}
+.city_header{
+    width:100%;
+    padding-bottom:2em;
+}
+.footer{
+    text-align:center;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:2em;
+}
