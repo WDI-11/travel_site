@@ -6,13 +6,15 @@ class PostsController < ApplicationController
     end
 
     def show
+        @city = City.find(params[:city_id])
         @post= Post.find(params[:id])
     end
 
     def destroy
+        @city = City.find(params[:city_id])
         @post = Post.find(params[:id])
         @post.delete
-        redirect_to city_posts_path
+        redirect_to city_posts_path(@city)
       end
     def create
     @city = City.find(params[:city_id])
