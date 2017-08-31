@@ -16,6 +16,7 @@ class PostsController < ApplicationController
         @post.delete
         redirect_to city_posts_path(@city)
       end
+      
     def create
     @city = City.find(params[:city_id])
     @post = @city.posts.new(post_params)
