@@ -18,38 +18,12 @@ class PostsController < ApplicationController
       end
     def create
     @city = City.find(params[:city_id])
-<<<<<<< HEAD
-    # @post = @city.posts.new(post_params)
-        
-    # if @post.errors.any?
-    #     @posts.errors.each do |attributes, message|
-    #     end
-    #     @posts.errors.include>(:review)
-    #     review_errors= @post.errors.on(:review)
-    #  redirect_to city_posts_path(@city, @post)
-
-    #     if review_errors.kind_of?(Array)
-    #         review_errors.each do |review|
-    #         end
-    #     else
-    #         review = review_errors
-    #     end
-    #   end
-    @post = @city.posts.new(post_params)
-    if @post.save
-      redirect_to city_posts_path(@city, @post)
-    else
-      flash[:error] = @post.errors.full_messages.join(", ")
-      redirect_to new_city_post_path
-      end
-=======
     @post = @city.posts.new(post_params)
     if @post.save
         redirect_to city_posts_path(@city, @post)
     else
         redirect_to new_city_post_path
     end
->>>>>>> dev
     end
 
     def new
