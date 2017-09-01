@@ -21,7 +21,7 @@
 * Devise
 
 ## Wireframes
-![WIREFRAME](public/Wireframe.jpg)
+![WIREFRAME](public/WireFrames.jpg)
 
 ## ERD (Database Modeling)
 
