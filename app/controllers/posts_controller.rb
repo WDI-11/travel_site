@@ -24,7 +24,7 @@ class PostsController < ApplicationController
     if @post.save
         redirect_to city_post_path(@city, @post)
     else
-        flash[:alert] = @post.errors.full_messages.join(", ")
+        flash.now[:alert] = @post.errors.full_messages.join(", ")
         render :new
     end
     # redirect_to city_posts_path(@city, @post)
