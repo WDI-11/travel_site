@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
     def index
         @city = City.find(params[:city_id])
-        @posts = @city.posts.all.order('created_at DESC')
+        # @posts = @city.posts.all.order('created_at DESC')
+        @posts = @city.posts.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
         # @posts = Post.all
     end
 
