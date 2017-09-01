@@ -1,9 +1,14 @@
 class PostsController < ApplicationController
     def index
+        ####################################
+        # limits post to a specific city   #
+        ####################################
         @city = City.find(params[:city_id])
-        # @posts = @city.posts.all.order('created_at DESC')
+
+        ######################################################
+        # sorting posts in descending order and pagination   #
+        ######################################################
         @posts = @city.posts.order('created_at DESC').paginate(:page => params[:page], :per_page => 10)
-        # @posts = Post.all
     end
 
     def show
@@ -19,15 +24,21 @@ class PostsController < ApplicationController
       end
       
     def create
-    @city = City.find(params[:city_id])
-    @post = @city.posts.new(post_params)
-    if @post.save
-        redirect_to city_post_path(@city, @post)
-    else
-        flash.now[:alert] = @post.errors.full_messages.join(", ")
-        render :new
-    end
-    # redirect_to city_posts_path(@city, @post)
+        @city = City.find(params[:city_id])
+        @post = @city.posts.new(post_params)
+        
+        if @post.save
+        ######################################################
+        # if a post saves sucessfully, redirect to new post  #
+        ######################################################
+            redirect_to city_post_path(@city, @post)
+        else
+        ###################################################################
+        # if validation fails, send error message and re-render the page  #
+        ###################################################################
+            flash.now[:alert] = @post.errors.full_messages.join(", ")
+            render :new
+        end
     end
 
     def new
