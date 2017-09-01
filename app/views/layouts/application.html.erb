@@ -23,7 +23,6 @@
           <div>
             <ul class="nav navbar-nav navbar-right">
                 <li><%= notice %></li>
-                <li><%= alert %></li>
                   <% if user_signed_in? %>
                   <li>
                     <%= link_to "Logout", destroy_user_session_path, method: :delete %>
