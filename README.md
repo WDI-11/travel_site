@@ -1,24 +1,29 @@
-# README
+ * Team Members: Jonathan Watson, Will Lai, Jessica O'brien
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Application Name: Boingo Bongo
+* Initial Requirements: https://github.com/ATL-WDI-Exercises/project-vagabond
 
-Things you may want to cover:
+* Heroku Link: https://boingo-bongo.herokuapp.com
 
-* Ruby version
+* GitHub Repo: https://github.com/WDI-11/travel_site
 
-* System dependencies
+<!-- * Pitch Deck: https://slack-files.com/files-pri-safe/T0351JZQ0-F6Y1SLFV4/jet_2flagged.pdf?c=1504283154-93ab6369bd07af0b9e8feaf6fd99641148ae7bf5 -->
 
-* Configuration
+# Special Features
+*Full CRUD for posts, completely tied to cities. 
 
-* Database creation
 
-* Database initialization
+# Technologies Used
+* Ruby on Rails
+* HTML5
+* CSS3
+* PostgreSQL / ActiveRecord
+* Devise
 
-* How to run the test suite
+## Wireframes
+![WIREFRAME](public/Wireframe.jpg)
 
-* Services (job queues, cache servers, search engines, etc.)
+## ERD (Database Modeling)
 
-* Deployment instructions
+![ERD](public/ERD.jpg)
 
-* ...
