@@ -45,3 +45,64 @@
     width:100%;
     height:2em;
 }
+.cityHeader{
+    padding-top:1em;
+    padding-bottom:2em;
+    text-align:center;
+}
+.cityHeader h1{
+    font-size:7em;
+}
+.cityHeader p{
+    font-size:1.5em;
+}
+.cityRow{
+    display:flex; 
+    flex-wrap:wrap;
+}
+.cityPhoto{
+    display:block;
+    padding-bottom:0em;
+    height:13em;
+}
+.cityPhoto h1{
+    color:white;
+    font-weight:800;
+    position:absolute;
+    bottom:3em;
+    left:0;
+    right:0;
+    margin:auto;
+    text-align:center;
+}
+.cityButton{
+    display:block;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+.postHeader h1{
+    color:white;
+    font-weight:800;
+    position:absolute;
+    bottom:3em;
+    left:0;
+    right:0;
+    margin:auto;
+    text-align:center;
+    font-size:10em;
+}
+.buttonRow{
+    text-align:right;
+}
+.newReview h1{
+    text-align:center;
+}
+.textbox1{
+    line-height:1.75em;
+    width:40%;
+}
+.textbox2{
+    line-height:1.75em;
+    width:90%;
+}

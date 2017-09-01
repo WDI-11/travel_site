@@ -1,16 +1,18 @@
-<div class="row">
-    <h1 style="text-align:center">New Review Post</h1>
+<div class="row newReview">
+    <h1>New Review Post</h1>
 
 
 <%= form_for [@city, @post] do |f| %>
 
 <p>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.label :title, :class => 'textbox1' %>
+    <br />
+    <%= f.text_field :title, :class => 'textbox1'%>
 </p>
 <p>
-        <%= f.label :review %>
-        <%= f.text_field :review %>
+        <%= f.label :review, :class => 'textbox2' %>
+        <br />
+        <%= f.text_field :review, :class => 'textbox2' %>
 </p>
 <p>
         <%= f.submit :class => "btn btn-info"%>
